@@ -147,7 +147,7 @@ class Api {
 }
  
 const api = new Api({
-  url: `http://localhost:4000`,
+  url: `api.bella.nomoredomains.xyz`,
   headers: {
     authorization: "95e95c6c-51d6-4d7a-ab8a-1eae75c75183",
     "Content-Type": "application/json",

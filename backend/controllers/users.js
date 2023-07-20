@@ -120,12 +120,13 @@ const login = (req, res, next) => {
     .then((user) => {
       const token = jwt.sign({ _id: user._id }, NODE_ENV === 'production' ? JWT_SECRET : 'dev-secret');
       res.status(STATUS_OK).send({ token });
+      console.log('login');
     })
     .catch(next);
 };
 
 const getUserInfo = (req, res, next) => {
-  console.log('wow');
+  console.log('getuser');
   User.findById(req.user._id)
     .then((user) => {
       if (!user) {
