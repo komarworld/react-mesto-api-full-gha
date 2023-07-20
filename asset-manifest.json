@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/komarworld/mesto-react.git/static/css/main.ad3f8b84.css",
-    "main.js": "/komarworld/mesto-react.git/static/js/main.289abf0c.js",
+    "main.js": "/komarworld/mesto-react.git/static/js/main.ae90dd87.js",
     "static/media/Inter-Medium.woff": "/komarworld/mesto-react.git/static/media/Inter-Medium.9053572c46aeb4b16caa.woff",
     "static/media/Inter-Black.woff": "/komarworld/mesto-react.git/static/media/Inter-Black.c6938660eec019fefd68.woff",
     "static/media/Inter-Regular.woff": "/komarworld/mesto-react.git/static/media/Inter-Regular.8c206db99195777c6769.woff",
@@ -19,10 +19,10 @@
     "static/media/add_btn_small.svg": "/komarworld/mesto-react.git/static/media/add_btn_small.54b1426515811a15ebaf.svg",
     "static/media/popup_close_btn.svg": "/komarworld/mesto-react.git/static/media/popup_close_btn.b793e07c3f4c19e26c11.svg",
     "main.ad3f8b84.css.map": "/komarworld/mesto-react.git/static/css/main.ad3f8b84.css.map",
-    "main.289abf0c.js.map": "/komarworld/mesto-react.git/static/js/main.289abf0c.js.map"
+    "main.ae90dd87.js.map": "/komarworld/mesto-react.git/static/js/main.ae90dd87.js.map"
   },
   "entrypoints": [
     "static/css/main.ad3f8b84.css",
-    "static/js/main.289abf0c.js"
+    "static/js/main.ae90dd87.js"
   ]
 }
