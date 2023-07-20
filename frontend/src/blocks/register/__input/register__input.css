@@ -1,0 +1,17 @@
+.register__input {
+  background-color: initial;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #CCC;
+  padding: 0;
+  padding-bottom: 10px;
+  border: none;
+  border-bottom: 2px solid  #CCC;
+  
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}

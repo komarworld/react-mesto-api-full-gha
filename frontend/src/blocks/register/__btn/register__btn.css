@@ -1,0 +1,20 @@
+.register__btn{
+  background-color: #FFF;
+  color: #000;
+  max-width: 358px;
+  min-height: 50px;
+  margin-top: 216px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 0;
+}
+
+.register__btn:hover {
+  opacity: 0.8;
+}

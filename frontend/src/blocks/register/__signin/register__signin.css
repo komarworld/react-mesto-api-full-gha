@@ -1,0 +1,11 @@
+.register__signin{
+  color: #FFF;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+}
