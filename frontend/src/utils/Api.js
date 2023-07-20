@@ -147,7 +147,7 @@ class Api {
 }
  
 const api = new Api({
-  url: `api.bella.nomoredomains.xyz`,
+  url: `https://api.bella.nomoredomains.xyz`,
   headers: {
     "Content-Type": "application/json",
   },
