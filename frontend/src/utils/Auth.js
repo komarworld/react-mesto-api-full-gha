@@ -63,7 +63,7 @@ class Auth {
 }
 
 const auth = new Auth({
-  baseUrl: 'http://api.bella.nomoredomains.xyz',
+  baseUrl: 'https://api.bella.nomoredomains.xyz',
   headers: {
     'Content-Type': 'application/json'
   }
