@@ -38,6 +38,14 @@ class Auth {
       .then(res => {
         return this._checkResponseResult(res)
       })
+      .then((data) => {
+        if (data.token) {
+          localStorage.setItem("token", data.token);
+          console.log(data)
+          return data;
+        }
+      })
+      .catch((err) => console.log(err));  
   }
   //проверяем токин
   checkToken(token) {

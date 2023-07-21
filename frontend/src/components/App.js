@@ -61,6 +61,23 @@ function App() {
           console.log(err.message))
         }
   },[loggedIn])
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (token) {
+      auth.checkToken(token)
+        .then((data) => {
+          if (data) {
+            setUserEmail(data.email);
+            setLoggedIn(true);
+            navigate('/', { replace: true })
+          }
+        })
+        .catch((err) => {
+          console.log(err); 
+        })
+      }
+  }, []);
   
   function closeAllPopups() {
     setIsEditProfilePopupOpen(false);
@@ -147,12 +164,14 @@ function App() {
     function handleLogin (email, password) {
       auth.authorize(email, password)
         .then((data)=> {
-          localStorage.setItem('token', data.token)
+          if (data.token){
+          navigate('/', {replace: true})
           setLoggedIn(true)
-          navigate('/')
+          setUserEmail(data.email)
+          }
         })
         .catch(err => {
-          console.log(err)
+          console.log(err);
         })
     }
 
@@ -169,23 +188,6 @@ function App() {
           setisInfoTooltipOpen(true)
         })
     }
-
-    useEffect(() => {
-      const token = localStorage.getItem('token');
-      if (token) {
-        auth.checkToken(token)
-          .then((data) => {
-            if (data) {
-              setUserEmail(data.data.email);
-              setLoggedIn(true);
-              navigate('/cards', { replace: true })
-            }
-          })
-          .catch((err) => {
-            console.log(err); 
-          })
-        }
-    }, []);
 
     function onsignOut(){
       setLoggedIn(false)
