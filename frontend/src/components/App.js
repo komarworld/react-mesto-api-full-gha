@@ -1,19 +1,19 @@
-import Header from './Header'
-import Main from './Main'
-import Footer from './Footer'
+import Header from './Header';
+import Main from './Main';
+import Footer from './Footer';
 import Register from './Register';
-import Login from './Login'
+import Login from './Login';
 import { useState, useEffect } from "react";
-import ImagePopup from './ImagePopup'
+import ImagePopup from './ImagePopup';
 import EditProfilePopup from './EditProfilePopup';
 import EditAvatarPopup from './EditAvatarPopup';
 import AddPlacePopup from './AddPlacePopup';
 import DeleteCardPopup from './DeleteCardPopup';
 import InfoTooltip from './InfoTooltip';
-import api from '../utils/Api'
+import api from '../utils/Api';
 import auth from '../utils/Auth';
 import { CurrentUserContext } from "../contexts/CurrentUserContext";
-import { Navigate, Route, Routes, useNavigate} from 'react-router-dom'
+import { Navigate, Route, Routes, useNavigate} from 'react-router-dom';
 import ProtectedRoute from './ProtectedRoute';
 
 
@@ -68,6 +68,7 @@ function App() {
       auth.checkToken(token)
         .then((data) => {
           if (data) {
+            console.log(data.email)
             setUserEmail(data.email);
             setLoggedIn(true);
             navigate('/', { replace: true })
@@ -167,11 +168,12 @@ function App() {
           if (data.token){
           navigate('/', {replace: true})
           setLoggedIn(true)
-          setUserEmail(data.email)
+          setUserEmail(email)
           }
         })
         .catch(err => {
           console.log(err);
+          setisInfoTooltipOpen(true)
         })
     }
 
